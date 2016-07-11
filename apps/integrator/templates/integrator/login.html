@@ -1,0 +1,10 @@
+{% block login %}
+	<!-- .as_p sets the login form from the form authentication as each element surrounded by <p> -->
+	<form action = "{% url 'integrator:login' %}" method='POST'>
+	{% csrf_token %}
+
+	{{login_form.as_p}}
+	<input type= 'submit' value= 'login'>
+	</form>
+
+	{% endblock %}
